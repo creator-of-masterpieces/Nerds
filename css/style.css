@@ -178,7 +178,7 @@
 
     .products::after {
         position: absolute;
-        left: 12%;
+        left: 11%;
         bottom: -80px;
         content: "";
         width: 80%;
@@ -254,16 +254,17 @@
 
     .about {
         position: relative;
-    }
-    
-    .container {
 
+        margin-bottom: 115px;
+    }
+
+    .container {
         display: flex;
     }
 
     .about::after {
         position: absolute;
-        left: 12%;
+        left: 10%;
         bottom: -80px;
         content: "";
         width: 80%;
@@ -302,9 +303,6 @@
         text-transform: uppercase;
     }
 
-    .about-list {
-        
-    }
 
     .list-item {
         position: relative;
@@ -350,6 +348,53 @@
         font-weight: 700;
     }
 
-    .percent {
 
+            /* Partners
+    =================================== */
+    .partners {
+        position: relative;
+
+        margin-bottom: 125px;
     }
+
+    .partners::after {
+        position: absolute;
+        left: 10%;
+        bottom: -45px;
+        content: "";
+        width: 80%;
+        height: 2px;
+
+        background-color: #eeeeee;
+    }
+
+
+
+     .partners .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        max-width: 1160px;
+        padding: 0 30px;
+    }
+
+    .partners-item {
+        max-width: 260px;
+    }
+
+    .partners-logo {
+        opacity: 0.2;
+    }
+
+    .partners-logo:hover,
+    .partners-logo:focus {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .partners-logo:active {
+        opacity: 0.1;
+    }
+
