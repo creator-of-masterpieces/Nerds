@@ -398,3 +398,13 @@
         opacity: 0.1;
     }
 
+                /* Map
+    =================================== */
+
+    .modal-map {
+        width: 100%;
+        max-width: 1725px;
+        max-height:808px;
+        margin-bottom: 70px;
+    }
+
