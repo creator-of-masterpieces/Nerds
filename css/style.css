@@ -126,7 +126,6 @@
 
     .slider-title {
         margin: 0 0 30px 0;
-
         color: #000;
         font-size: 3.5rem;
         line-height: 3.5rem;
@@ -183,7 +182,6 @@
         content: "";
         width: 80%;
         height: 2px;
-
         background-color: #eeeeee;
     }
 
@@ -229,32 +227,29 @@
         background-color: #efc84a;
     }
 
-    .product-btn-green:hover,
-    .product-btn-green:focus {
-       background-color: #00bc6c;
+    .product-btn-green:hover, .product-btn-green:focus {
+        background-color: #00bc6c;
     }
 
     .product-btn-green:active {
-        background-color:#00aa62;
+        background-color: #00aa62;
         box-shadow: inset 0 3px rgba(0, 153, 88, 0.1);
     }
-    .product-btn-yellow:hover,
-    .product-btn-yellow:focus {
-       background-color: #eab534;
+
+    .product-btn-yellow:hover, .product-btn-yellow:focus {
+        background-color: #eab534;
     }
 
     .product-btn-yellow:active {
-        background-color:#e5a722;
+        background-color: #e5a722;
         box-shadow: inset 0 3px rgba(206, 150, 31, 0.1);
     }
 
-        /* About
+    /* About
     =================================== */
-
 
     .about {
         position: relative;
-
         margin-bottom: 115px;
     }
 
@@ -269,10 +264,8 @@
         content: "";
         width: 80%;
         height: 2px;
-
         background-color: #eeeeee;
     }
-
 
     .left-column {
         width: 100%;
@@ -282,7 +275,6 @@
 
     .about-title {
         margin-bottom: 40px;
-
         color: #000;
         font-size: 2.7rem;
         line-height: 2.7rem;
@@ -291,24 +283,19 @@
 
     .about-subtitle {
         margin-bottom: 50px;
-
         color: #283136;
     }
 
     .list-title {
         margin-bottom: 35px;
-
         color: #000;
         font-weight: 700;
         text-transform: uppercase;
     }
 
-
     .list-item {
         position: relative;
-
         margin-bottom: 35px;
-
         list-style: none;
     }
 
@@ -316,12 +303,10 @@
         position: absolute;
         bottom: 10px;
         left: -35px;
-
         content: "";
         width: 25px;
         height: 2px;
         background-color: #fb565a;
-
     }
 
     .right-column-flex {
@@ -330,7 +315,6 @@
 
     .right-column-title {
         margin-bottom: 55px;
-
         color: #000;
         font-weight: 700;
         text-transform: uppercase;
@@ -348,12 +332,11 @@
         font-weight: 700;
     }
 
-
-            /* Partners
+    /* Partners
     =================================== */
+
     .partners {
         position: relative;
-
         margin-bottom: 125px;
     }
 
@@ -364,17 +347,13 @@
         content: "";
         width: 80%;
         height: 2px;
-
         background-color: #eeeeee;
     }
 
-
-
-     .partners .container {
+    .partners .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         width: 100%;
         max-width: 1160px;
         padding: 0 30px;
@@ -388,8 +367,7 @@
         opacity: 0.2;
     }
 
-    .partners-logo:hover,
-    .partners-logo:focus {
+    .partners-logo:hover, .partners-logo:focus {
         cursor: pointer;
         opacity: 1;
     }
@@ -398,13 +376,84 @@
         opacity: 0.1;
     }
 
-                /* Map
+    /* Map
     =================================== */
 
     .modal-map {
         width: 100%;
         max-width: 1725px;
-        max-height:808px;
+        max-height: 808px;
+    }
+
+    /* Footer
+    =================================== */
+
+    .main-footer .container {
+        display: flex;
+        margin-top: 70px;
         margin-bottom: 70px;
     }
 
+    .social {
+        display: flex;
+        width: 100%;
+        max-width: 260px;
+        margin-right: 60px;
+    }
+
+    .social-link {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        background-color: #eeeeee;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .social-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -7.5px;
+        margin-left: -13px;
+    }
+
+    .social-icon-vk {
+        margin-top: -7.5px;
+        margin-left: -13px;
+    }
+
+    .social-icon-fb {
+        margin-top: -11px;
+        margin-left: -5px;
+    }
+
+    .social-icon-insta {
+        margin-top: -10.5px;
+        margin-left: -10.5px;
+    }
+
+    .social-link:hover, .social-link:focus {
+        background-color: #e74246;
+    }
+
+    .social-link:active path {
+        fill-opacity: 0.3;
+    }
+
+    .sale {
+        max-width: 560px;
+    }
+
+    .sale-title {
+        margin: 0 0 10px 0;
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .sale-text {
+        margin: 0;
+    }
