@@ -376,13 +376,60 @@
         opacity: 0.1;
     }
 
-    /* Map
-    =================================== */
 
+
+    /* Popaps
+    =================================== */
+    .popaps {
+        position: relative;
+    }
+    
     .modal-map {
         width: 100%;
         max-width: 1725px;
         max-height: 808px;
+    }
+
+
+    .modal-adress {
+        position: absolute;
+        top: 55px;
+        left: 140px;
+
+        padding: 50px;
+
+        background-color: #fff;
+    }
+
+    .adress-title {
+        margin-bottom: 35px;
+
+        color: #000;
+        font-size: 1.125rem;
+    }
+
+    .adress-text {
+        margin-bottom: 20px;
+
+        font-style: normal;
+        color: #666666;
+    }
+
+    .adress-phone {
+        margin-bottom: 35px;
+
+        font-style: normal;
+        color: #666666;
+    }
+
+    .phone-link {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color: #666666;
+    }
+
+    .modal-btn {
+        margin: 0;
     }
 
     /* Footer
