@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="page">
+    <div class="page inner-page">
 
 
         <!-- Header -->
@@ -40,60 +40,82 @@
         </header>
 
         <main class="content">
-            <div class="content-title">
-                <h1 class="title-text">Магазин готовых шаблонов</h1>
+
+            <div class="content-title-container">
+                <h1 class="content-title-text">Магазин готовых шаблонов</h1>
             </div>
+
             <div class="container">
+                <section class="filters">
+                    <h2 class="visually-hidden">Фильтры</h2>
 
-            
+                    <div class="filter-feature">
+                        <form class="filter-form" action="/" method="POST">
 
-            <section class="filters">
-                <h2 class="visually-hidden">Фильтры</h2>
-                <div class="filter-price">
+                            <div class="filter-price">
+                                <h3 class="group-title">Стоимость:</h3>
+                                <div class="group-price-input">
+                                <label class="price-label" for="price-from-input">от</label>
+                                <input class="price-input" id="price-from-input" type="number" placeholder="0">
+                                <label class="price-label" for="price-to-input">до</label>
+                                <input class="price-input" id="price-to-input" type="number" placeholder="15 000">
+                                </div>
+                            </div>
 
-                </div>
+                            <fieldset class="group-input">
+                                <legend class="group-title">СЕТКА:</legend>
 
-                <div class="filter-feature">
-                    <form class="filter-form" action="/" method="POST">
-                    <fieldset class="group-input">
-                        <legend class="group-title">СЕТКА:</legend>
-                        
-                        <input type="radio" name="layout" id="adaptive-layout" checked>
-                        <label class="radio-label" for="adaptive-layout">Адаптивная</label>
+                                <input type="radio" name="layout" id="adaptive-layout" checked>
+                                <label class="radio-label" for="adaptive-layout">Адаптивная</label>
 
-                        <input type="radio" name="layout" id="fix-layout">
-                        <label class="radio-label" for="fix-layout">Фиксированная</label>
-                        
+                                <input type="radio" name="layout" id="fix-layout">
+                                <label class="radio-label" for="fix-layout">Фиксированная</label>
 
-                        <input type="radio" name="layout" id="responsive-layout">
-                        <label class="radio-label" for="responsive-layout">Резиновая</label>
-                    </fieldset>
 
-                    <fieldset class="group-input">
-                        <legend class="group-title">ОСОБЕННОСТИ:</legend>
+                                <input type="radio" name="layout" id="responsive-layout">
+                                <label class="radio-label" for="responsive-layout">Резиновая</label>
+                            </fieldset>
 
-                        <input type="checkbox" name="slider" id="slider-input" checked>
-                        <label class="checkbox-label" for="slider-input">Слайдер</label>
-                       
-                        <input type="checkbox" name="slider" id="advantages-input">
-                        <label class="checkbox-label" for="advantages-input">Блок преимуществ</label>
+                            <fieldset class="group-input">
+                                <legend class="group-title">ОСОБЕННОСТИ:</legend>
 
-                        <input type="checkbox" name="slider" id="news-input" checked>
-                        <label class="checkbox-label" for="news-input">Новости</label>
+                                <input type="checkbox" name="slider" id="slider-input" checked>
+                                <label class="checkbox-label" for="slider-input">Слайдер</label>
 
-                        <input type="checkbox" name="slider" id="gallerey-input">
-                        <label class="checkbox-label" for="gallerey-input">Галерея</label>
+                                <input type="checkbox" name="slider" id="advantages-input">
+                                <label class="checkbox-label" for="advantages-input">Блок преимуществ</label>
 
-                        <input type="checkbox" name="slider" id="cart-input">
-                        <label class="checkbox-label" for="cart-input">Корзина</label>
+                                <input type="checkbox" name="slider" id="news-input" checked>
+                                <label class="checkbox-label" for="news-input">Новости</label>
 
-                    </fieldset>
-                    <input class="form-btn" type="submit" name="submit" value="ПОКАЗАТЬ">
-                    </form>
-                </div>  <!-- filter-feature -->
+                                <input type="checkbox" name="slider" id="gallerey-input">
+                                <label class="checkbox-label" for="gallerey-input">Галерея</label>
 
-            </section>
-        </div> <!-- / container -->
+                                <input type="checkbox" name="slider" id="cart-input">
+                                <label class="checkbox-label" for="cart-input">Корзина</label>
+
+                            </fieldset>
+                            <input class="form-btn" type="submit" name="submit" value="ПОКАЗАТЬ">
+                        </form>
+                    </div> <!-- filter-feature -->
+
+                </section> <!-- filters -->
+
+                <section class="products">
+                    <div class="products-filter">
+
+                        <p class="products-filter-title">Сортировать:</p>
+
+                        <ul class="products-filter-list">
+                            <li class="products-filter-item"><a class="products-filter-link current-link" href="#">по
+                                    цене</a></li>
+                            <li class="products-filter-item"><a class="products-filter-link" href="#">по типу</a></li>
+                            <li class="products-filter-item"><a class="products-filter-link" href="#">по названию</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div> <!-- / container -->
 
         </main>
 

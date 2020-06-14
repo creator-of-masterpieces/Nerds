@@ -56,8 +56,15 @@
         align-items: center;
     }
 
-    .logo-link:hover, .logo-link:focus {
-        opacity: 0.8;
+    .logo-link:hover,
+    .logo-link:focus {
+        outline: none;
+    }
+
+    .logo-link:hover .logo-content, 
+    .logo-link:focus .logo-content {
+        opacity: 0.6;
+        outline: none;
     }
 
     .logo-link:active {
@@ -101,6 +108,7 @@
 
     .nav-link:hover, .nav-link:focus, .user-link:hover, .user-link:focus {
         color: #fb565a;
+        outline: none;
     }
 
     .nav-link:active, .user-link:active {
@@ -153,6 +161,7 @@
 
     .btn:hover, .btn:focus {
         background-color: #e74246;
+        outline: none;
     }
 
     .btn:active {
@@ -227,8 +236,10 @@
         background-color: #efc84a;
     }
 
-    .product-btn-green:hover, .product-btn-green:focus {
+    .product-btn-green:hover,
+    .product-btn-green:focus {
         background-color: #00bc6c;
+        outline: none;
     }
 
     .product-btn-green:active {
@@ -236,8 +247,10 @@
         box-shadow: inset 0 3px rgba(0, 153, 88, 0.1);
     }
 
-    .product-btn-yellow:hover, .product-btn-yellow:focus {
+    .product-btn-yellow:hover, 
+    .product-btn-yellow:focus {
         background-color: #eab534;
+        outline: none;
     }
 
     .product-btn-yellow:active {
@@ -366,9 +379,13 @@
     .partners-logo {
         opacity: 0.2;
     }
+    .partners-link:hover,
+    .partners-link:focus {
+        outline: none;
+    }
 
-    .partners-logo:hover, .partners-logo:focus {
-        cursor: pointer;
+    .partners-link:hover > .partners-logo,
+    .partners-link:focus > .partners-logo {
         opacity: 1;
     }
 
@@ -376,14 +393,13 @@
         opacity: 0.1;
     }
 
-
-
     /* Popaps
     =================================== */
+
     .popaps {
         position: relative;
     }
-    
+
     .modal-map {
         width: 100%;
         min-height: 415px;
@@ -394,39 +410,32 @@
         position: absolute;
         top: 0;
         left: 0;
-
         width: 100%;
         max-height: 415px;
     }
-
 
     .modal-adress {
         position: absolute;
         top: 55px;
         left: 140px;
-
         padding: 50px;
-
         background-color: #fff;
     }
 
     .adress-title {
         margin-bottom: 35px;
-
         color: #000;
         font-size: 1.125rem;
     }
 
     .adress-text {
         margin-bottom: 20px;
-
         font-style: normal;
         color: #666666;
     }
 
     .adress-phone {
         margin-bottom: 35px;
-
         font-style: normal;
         color: #666666;
     }
@@ -436,6 +445,12 @@
         font-size: 1rem;
         color: #666666;
     }
+
+    .phone-link:hover,
+    .phone-link:focus {
+        color: #000;
+    }
+
 
     .modal-btn {
         margin: 0;
@@ -493,6 +508,7 @@
 
     .social-link:hover, .social-link:focus {
         background-color: #e74246;
+        outline: none;
     }
 
     .social-link:active path {
@@ -515,39 +531,46 @@
     }
 
 
-
-        /* Стили для страницы каталога
+    /* Стили для страницы каталога
     =================================== */
 
 
-
-
-        /* Content-title
+    /* Content-title
     =================================== */
-    .content-title {
+
+    .content-title-container {
         width: 100%;
+        margin-bottom: 65px;
 
-        background-color: #eeeeee;
+        background-color: #eeeeee; 
     }
 
-    .title-text {  
+    .content-title-text {
         width: 100%;
         max-width: 760px;
         margin: 0 auto;
         padding-bottom: 120px;
-
         font-size: 3.45rem;
         font-weight: bold;
         color: #000;
     }
 
-        /* filter-feature
+    /* filter-feature
     =================================== */
+
+    .filter-feature {
+        margin-right: 140px;
+    }
+
+    .filter-form {
+        text-align: left;
+    }
 
     .group-input {
         display: flex;
         flex-direction: column;
-
+        margin: 0;
+        padding: 0;
         border: none;
     }
 
@@ -555,60 +578,55 @@
         font-size: 1.125rem;
         font-weight: bold;
         color: #000;
-
+        text-transform: uppercase;
         margin-bottom: 20px;
     }
 
-    .group-input label {
+
+    .group-input .radio-label,
+    .group-input .checkbox-label {
         position: relative;
-
         margin-bottom: 30px;
-
         cursor: pointer;
     }
 
-    .group-input input[type="checkbox"],
-    .group-input input[type="radio"] {
+    .group-input input[type="checkbox"], .group-input input[type="radio"] {
         display: none;
     }
 
     .radio-label {
-        padding-left: 22px;
+        padding-left: 35px;
     }
 
     .radio-label::before {
         position: absolute;
         top: 0;
-        left: -14px;
-
+        left: 0;
         content: "";
         width: 25px;
         height: 25px;
-
         background-image: url('../img/svg/radio-off.svg');
     }
 
-    input:checked + .radio-label::before {
+    input:checked+.radio-label::before {
         background-image: url('../img/svg/radio-on.svg');
     }
 
     .checkbox-label {
-        padding-left: 20px;
+        padding-left: 35px;
     }
 
     .checkbox-label::before {
         position: absolute;
         top: 0;
-        left: -13px;
-
+        left: 0;
         content: "";
         width: 23px;
         height: 23px;
-
         background-image: url('../img/svg/checkbox-off.svg');
     }
 
-    input:checked + .checkbox-label::before {
+    input:checked+.checkbox-label::before {
         background-image: url('../img/svg/checkbox-on.svg');
     }
 
@@ -627,15 +645,139 @@
         text-align: center;
     }
 
-    .form-btn:hover,
-    .form-btn:focus {
+    .form-btn:hover, .form-btn:focus {
         outline: none;
         background-color: #dfdfdf;
     }
 
     .form-btn:active {
         color: rgba(0, 0, 0, 0.3);
-        background-color: ##d5d5d5;
+        background-color: #d5d5d5;
         box-shadow: inset 0 3px rgba(0, 1, 1, 0.1);
     }
 
+    /* products-filter
+    =================================== */
+
+    .products {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    .products-filter {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .products-filter-title {
+        margin: 0;
+
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #000;
+        text-transform: uppercase;
+    }
+
+    .products-filter-list {
+        display: flex;
+        width: 100%;
+        max-width: 360px;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .products-filter-link {
+        width: 100%;
+        min-width: 60px;
+        margin-right: 25px;
+        font-size: 0.875rem;
+        color: rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .products-filter-link.current-link {
+        color: #000;
+    }
+
+    .products-filter-item:last-child {
+        position: relative;
+        min-width: 200px;
+        margin-right: 0;
+        padding-right: 90px;
+    }
+
+    .products-filter-item:last-child::before {
+        position: absolute;
+        content: '';
+        top: 5px;
+        right: 30px;
+        width: 11px;
+        height: 10px;
+        background-image: url('../img/svg/black-triangle.svg');
+
+        transform: rotate(180deg);
+    }
+
+    .products-filter-item:last-child::after {
+        position: absolute;
+        content: '';
+        top: 5px;
+        right: 0;
+        width: 11px;
+        height: 10px;
+        background-image: url('../img/svg/grey-triangle.svg');
+    }
+
+
+        /* filter-price
+    =================================== */
+
+
+    .filter-price {
+        width: 100%;
+        max-width: 265px;
+        margin-bottom: 55px;
+    }
+
+    .group-price-input {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    .price-label {
+        margin-right: 10px;
+
+        font-size: 1rem;
+        color: #283136;
+        text-transform: uppercase;
+    }
+
+    .price-input {
+        width: 80px;
+        height: 40px;
+        margin-right: 35px;
+    }
+
+    .price-input {
+        border: none;
+        border-radius:3px ;
+        background-color: #eeeeee;
+    }
+
+    .price-input::placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color:#283136;
+        text-align: center;
+    }
+
+    .price-input:hover,
+    .price-input:focus {
+        background-color: #dfdfdf;
+        outline: none;
+    }
