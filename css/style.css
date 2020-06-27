@@ -118,6 +118,23 @@
         color: rgba(0, 0, 0, 0.3)
     }
 
+    .nav-link-current {
+        position: relative;
+    }
+
+    .nav-link-current::after {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+
+        content: "";
+
+        width: 75px;
+        height: 2px;
+
+        background-color: #fb565a;
+    }
+
     /* Slider
     =================================== */
 
@@ -246,7 +263,7 @@
 
     .product-btn-green:active {
         background-color: #00aa62;
-        box-shadow: inset 0 3px rgba(0, 153, 88, 0.1);
+        box-shadow: inset 0 3px #009958;
     }
 
     .product-btn-yellow:hover, .product-btn-yellow:focus {
@@ -256,7 +273,7 @@
 
     .product-btn-yellow:active {
         background-color: #e5a722;
-        box-shadow: inset 0 3px rgba(206, 150, 31, 0.1);
+        box-shadow: inset 0 3px #ce961f;
     }
 
     /* About
@@ -385,11 +402,11 @@
         outline: none;
     }
 
-    .partners-link:hover>.partners-logo, .partners-link:focus>.partners-logo {
+    .partners-link:hover .partners-logo, .partners-link:focus .partners-logo {
         opacity: 1;
     }
 
-    .partners-logo:active {
+    .partners-link:active .partners-logo {
         opacity: 0.1;
     }
 
@@ -509,6 +526,10 @@
         outline: none;
     }
 
+    .social-link:active {
+        box-shadow: inset 0 3px #c13135;
+    }
+
     .social-link:active path {
         fill-opacity: 0.3;
     }
@@ -591,36 +612,46 @@
         padding-left: 35px;
     }
 
-    .radio-label::before {
+    .radio-label svg{
         position: absolute;
         top: 0;
         left: 0;
-        content: "";
         width: 25px;
         height: 25px;
-        background-image: url('../img/svg/radio-off.svg');
     }
 
-    input:checked+.radio-label::before {
-        background-image: url('../img/svg/radio-on.svg');
+    .radio-label:hover path,
+    .radio-label:focus path {
+        fill: #4d4d4d;
+        stroke: #4d4d4d ;
     }
 
     .checkbox-label {
         padding-left: 35px;
     }
 
-    .checkbox-label::before {
+    .checkbox-label svg {
         position: absolute;
         top: 0;
         left: 0;
-        content: "";
         width: 23px;
         height: 23px;
-        background-image: url('../img/svg/checkbox-off.svg');
     }
 
-    input:checked+.checkbox-label::before {
-        background-image: url('../img/svg/checkbox-on.svg');
+    .checkbox-label:hover path,
+    .checkbox-label:focus path,
+    .checkbox-label:hover polygon,
+    .checkbox-label:focus polygon {
+        fill: #4d4d4d;
+        stroke: #4d4d4d ;
+    }
+
+    .checkbox-label polygon {
+        display: none;
+    }
+
+    input:checked + div polygon {
+        display: block;
     }
 
     .form-btn {
@@ -652,7 +683,7 @@
     /* products
     =================================== */
 
-    .products {
+    .inner-page .products {
         width: 100%;
         max-width: 760px;
     }
@@ -679,10 +710,13 @@
         list-style: none;
     }
 
+    .products-filter-item {
+        margin-right: 25px;
+    }
+
     .products-filter-link {
         width: 100%;
         min-width: 60px;
-        margin-right: 25px;
         font-size: 0.875rem;
         color: rgba(0, 0, 0, 0.3);
         text-transform: uppercase;
@@ -693,18 +727,31 @@
         color: #000;
     }
 
+    .products-filter-link:hover,
+    .products-filter-link:focus {
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .products-filter-link:active {
+        color: #000;
+    }
+
+    .products-filter-item:hover .current-link,
+    .products-filter-item:focus .current-link {
+        color: #000;
+    }
+
+
     .products-filter-item:last-child {
         position: relative;
-        min-width: 200px;
-        margin-right: 0;
-        padding-right: 90px;
+        margin-right: 80px;
     }
 
     .products-filter-item:last-child::before {
         position: absolute;
         content: '';
         top: 5px;
-        right: 30px;
+        right: -58px;
         width: 11px;
         height: 10px;
         background-image: url('../img/svg/black-triangle.svg');
@@ -715,7 +762,7 @@
         position: absolute;
         content: '';
         top: 5px;
-        right: 0;
+        right: -78px;
         width: 11px;
         height: 10px;
         background-image: url('../img/svg/grey-triangle.svg');
@@ -845,3 +892,71 @@
         height: 50px;
         margin-bottom: 40px;
     }
+
+
+        /* pagination
+    =================================== */
+
+
+    .pagination {
+        display: flex;
+        align-items: center;
+    }
+
+    .pagination-list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-right: 10px;
+
+
+        list-style: none;
+    }
+
+
+    .pagination-link {
+        margin-right: 10px;
+        padding: 20px 25px;
+        border-radius: 5px;
+
+        background-color: #eee;
+
+        color: #000;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .pagination-link:hover,
+    .pagination-link:focus {
+        background-color: #dfdfdf;
+    }   
+
+    .pagination-link:active {
+        color: rgba(0, 0, 0, 0.3);
+        background-color: #d5d5d5;
+        box-shadow: inset 0 3px #bfbfbf;
+    }
+
+    .pagination-btn {
+        margin-bottom: 0;
+        padding: 17px 80px;
+
+        background-color: #eeeeee;
+
+        color: #000;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .pagination-btn:hover,
+    .pagination-btn:focus {
+        background-color: #dfdfdf;
+    }
+
+    .pagination-btn:active {
+        color: rgba(0, 0, 0, 0.3);
+        background-color: #d5d5d5;
+        box-shadow: inset 0 3px #bfbfbf;
+    }
+
+
